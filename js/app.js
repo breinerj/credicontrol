@@ -33,6 +33,8 @@ async function iniciarAplicacion(){
                 "Estado conexión central:",
                 resultado
             );
+
+             
         
         if(!resultado){
 
@@ -128,7 +130,27 @@ async function iniciarAplicacion(){
 
     configurarBotones();
 
+               /*=========================================
+                MENU MOVIL
+            =========================================*/
+
+    const btnMenu = document.getElementById("btnMenuMovil");
+
+    if (btnMenu) {
+
+            btnMenu.addEventListener("click", () => {
+
+                document
+                    .querySelector(".sidebar")
+                    .classList.toggle("show");
+
+                });
+
+    }
+
 }
+
+
 /*=========================================================
     MENU LATERAL
 =========================================================*/
