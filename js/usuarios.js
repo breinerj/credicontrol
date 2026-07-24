@@ -69,7 +69,10 @@ function obtenerUsuario(id){
 
 function buscarUsuarioPorLogin(login){
 
-    return DB.usuarios.find(
+    console.log("Login recibido:", login);
+    console.log("Usuarios en memoria:", DB.usuarios);
+
+    const usuario = DB.usuarios.find(
 
         usuario =>
             usuario.usuario
@@ -78,6 +81,9 @@ function buscarUsuarioPorLogin(login){
 
     );
 
+    console.log("Usuario encontrado:", usuario);
+
+    return usuario;
 }
 
 
