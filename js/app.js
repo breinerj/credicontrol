@@ -34,11 +34,12 @@ async function iniciarAplicacion(){
                 resultado
             );
         
-            if(!resultado){
+        if(!resultado){
 
-                mostrarPantallaActivacion();
+            mostrarPantallaActivacion();
+            return;
 
-            }
+}
         }catch(error){
 
             console.error(

@@ -2534,6 +2534,14 @@ const administrador = {
         administrador
     );
 
+    console.log("Administrador creado:", administrador);
+    console.log("Usuarios en memoria:", DB.usuarios);
+
+    DB.guardar();
+
+    console.log("Usuarios en localStorage:",
+        localStorage.getItem(STORAGE.USUARIOS));
+
 
     DB.guardar();
 
@@ -2703,6 +2711,16 @@ async function activarEmpresa(){
 
 
         ocultarPantallaActivacion();
+
+        // Sincronizar información después de activar la empresa
+        await cargarClientesSupabase();
+        await cargarPrestamosSupabase();
+        await cargarPagosSupabase();
+
+        cargarClientes();
+        cargarPrestamos();
+        listarPagos();
+        cargarDashboard();
 
 
     }catch(error){

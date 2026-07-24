@@ -68,6 +68,9 @@ async function cargarClientesSupabase(){
                 }
             );
 
+            console.log("Error clientes:", error);
+            console.log("Datos clientes:", data);
+
 
         if(error){
 
