@@ -199,11 +199,17 @@ SIDEBAR MOVIL PROFESIONAL
 
     .contenido{
 
-        width:100%;
+        width:100% !important;
 
-        margin-left:0;
+        margin-left:0 !important;
 
-    }
+        padding:15px !important;
+
+        max-width:100%;
+
+        overflow-x:hidden;
+
+}
 
 }
 
@@ -284,7 +290,6 @@ DASHBOARD RESPONSIVE
     }
 
 }
-
 @media (max-width:576px){
 
     .card-dashboard,
@@ -300,6 +305,34 @@ DASHBOARD RESPONSIVE
     .dashboard-card h2{
 
         font-size:26px;
+
+    }
+
+}
+
+@media (max-width:992px){
+
+    main{
+
+        width:100% !important;
+
+        max-width:100% !important;
+
+    }
+
+    body{
+
+        overflow-x:hidden;
+
+    }
+
+}
+
+@media (max-width:992px){
+
+    .contenido{
+
+        background:red !important;
 
     }
 
