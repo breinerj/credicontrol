@@ -186,9 +186,20 @@ function configurarMenu(){
 
             mostrarPagina(pagina);
 
-        });
+            const sidebar = document.querySelector(".sidebar");
 
-    });
+            const overlay = document.getElementById("menuOverlay");
+
+            if(window.innerWidth <= 992){
+
+                sidebar.classList.remove("show");
+
+                overlay.classList.remove("show");
+
+            }
+
+        });
+            });
 
 }
 
