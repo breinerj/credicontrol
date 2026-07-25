@@ -134,19 +134,33 @@ async function iniciarAplicacion(){
                 MENU MOVIL
             =========================================*/
 
-    const btnMenu = document.getElementById("btnMenuMovil");
+   /*=========================================
+MENU MOVIL
+=========================================*/
 
-    if (btnMenu) {
+const btnMenu = document.getElementById("btnMenuMovil");
 
-            btnMenu.addEventListener("click", () => {
+const sidebar = document.querySelector(".sidebar");
 
-                document
-                    .querySelector(".sidebar")
-                    .classList.toggle("show");
+const overlay = document.getElementById("menuOverlay");
 
-                });
+if(btnMenu && sidebar && overlay){
 
-    }
+    btnMenu.addEventListener("click",()=>{
+
+        sidebar.classList.add("show");
+
+        overlay.classList.add("show");
+
+    });
+
+    overlay.addEventListener("click",()=>{
+
+        sidebar.classList.remove("show");
+
+        overlay.classList.remove("show");
+
+    });
 
 }
 
