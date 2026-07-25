@@ -402,6 +402,31 @@ body{
 
     min-width:900px;
 
+    scrollbar-color:#0d6efd #e9ecef;
+    scrollbar-width:thin;
+
+}
+
+.table-responsive::-webkit-scrollbar{
+
+    height:8px;
+
+}
+
+.table-responsive::-webkit-scrollbar-track{
+
+    background:#e9ecef;
+
+    border-radius:10px;
+
+}
+
+.table-responsive::-webkit-scrollbar-thumb{
+
+    background:#0d6efd;
+
+    border-radius:10px;
+
 }
 
 
@@ -2410,6 +2435,59 @@ SPRINT 9 - TABLAS MOVILES
     .table td{
 
         white-space:nowrap;
+
+    }
+
+}
+
+/*====================================================
+SPRINT 9.5 - MODO HORIZONTAL
+====================================================*/
+
+@media screen and (max-width:992px) and (orientation:landscape){
+
+    .contenido{
+
+        padding:10px;
+
+    }
+
+    .topbar{
+
+        margin-bottom:15px;
+
+    }
+
+    .topbar h3{
+
+        font-size:20px;
+
+    }
+
+    .module-header{
+
+        margin-bottom:15px;
+
+    }
+
+    .module-toolbar{
+
+        padding:12px 15px;
+
+    }
+
+    .table{
+
+        min-width:900px;
+
+    }
+
+    .table th,
+    .table td{
+
+        font-size:13px;
+
+        padding:10px;
 
     }
 
